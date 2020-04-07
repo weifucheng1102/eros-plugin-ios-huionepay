@@ -1,0 +1,6 @@
+framework module HuionepaySDK {
+  umbrella header "HuionepaySDK.h"
+
+  export *
+  module * { export * }
+}
