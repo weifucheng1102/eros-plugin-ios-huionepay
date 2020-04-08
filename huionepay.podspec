@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
 
-  spec.name         = "huionepay"
+  spec.name         = "eros-plugin-ios-huionepay"
   spec.version      = "0.0.1"
   spec.summary      = "A short description of huionepay."
   spec.description  = <<-DESC
