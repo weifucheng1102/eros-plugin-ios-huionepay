@@ -49,7 +49,7 @@
              }else{
                  callback(@{
                        @"code": resultDic[@"code"],
-                       @"errorMsg": resultDic[@"message"],
+                       @"errorMsg": resultDic[@"msg"],
                        @"data": @""
                        });
              }
@@ -61,7 +61,7 @@
         if (callback) {
             callback(@{
                        @"code": resultDic[@"code"],
-                       @"errorMsg": resultDic[@"message"],
+                       @"errorMsg": resultDic[@"msg"],
                        @"data": @""
                        });
         }
