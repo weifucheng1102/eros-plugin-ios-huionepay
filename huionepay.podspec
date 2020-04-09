@@ -8,6 +8,7 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.author             = { "weifucheng" => "770534748@qq.com" }
   spec.source       = {  :git => "https://github.com/weifucheng1102/eros-plugin-ios-huionepay.git", :tag => spec.version.to_s  }
-  spec.source_files  = "Source/*.{h,m,mm,framework}"
+  spec.source_files  = "Source/*.{h,m,mm}"
+  spec.vendored_frameworks = 'Source/*.framework'
 
 end
