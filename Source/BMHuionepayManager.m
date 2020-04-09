@@ -39,18 +39,28 @@
     [[HuionepayManager ShareService] payOrderA:orderDic signOrder:tempDic fromScheme:scheme callback:^(NSDictionary *resultDic) {
         NSLog(@"回调信息=%@",resultDic);
         if (callback) {
+             if (resultDic[@"url"]) {
             callback(@{
-                       @"status": resultDic[@"code"],
+                       @"code": @"-100",
+                       @"errorMsg": @"",
+                       @"data": @""
+                       });
+            
+             }else{
+                 callback(@{
+                       @"code": resultDic[@"code"],
                        @"errorMsg": resultDic[@"message"],
                        @"data": @""
                        });
+             }
+            
         }
    
     } errorback:^(NSDictionary *resultDic) {
       NSLog(@"错误信息=%@",resultDic);
         if (callback) {
             callback(@{
-                       @"status": resultDic[@"code"],
+                       @"code": resultDic[@"code"],
                        @"errorMsg": resultDic[@"message"],
                        @"data": @""
                        });
@@ -68,7 +78,7 @@
         if (_weakSelf.callback)
         {
             _weakSelf.callback(@{
-                                 @"status": resultDic[@"code"],
+                                 @"code": resultDic[@"code"],
                                  @"errorMsg": resultDic[@"msg"],
                                  @"data": @""
                                  });
